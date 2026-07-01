@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALRWAD Library</title>
+  <style>
+   
+    * { 
+      box-sizing: border-box; 
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(rgba(6, 13, 17, 0.75), rgba(6, 13, 17, 0.85)), 
+                  url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=1920&auto=format&fit=crop') no-repeat center center fixed;
+      background-size: cover;
+      color: #2c285f;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.1); 
+      backdrop-filter: blur(12px); 
+      -webkit-backdrop-filter: blur(12px); 
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 50px 40px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      max-width: 800px;
+      width: 90%;
+    }
+
+    header h1 {
+      margin: 0 0 10px 0;
+      font-size: 40px;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: #d1d5db;
+      margin-bottom: 40px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .btn {
+      padding: 15px 35px;
+      font-size: 18px;
+      font-weight: 600;
+      background: linear-gradient(135deg, #0096c7, #010b0f); 
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 50px; 
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 150, 199, 0.3);
+      display: flex;
+      align-items: center;
+      gap: 10px; 
+    }
+
+    .btn:hover {
+      transform: translateY(-5px) scale(1.03); 
+      box-shadow: 0 8px 25px rgba(0, 150, 199, 0.6);
+      background: linear-gradient(135deg, #00b4d8, #0077b6); 
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>📚 ALRWAD Library</h1>
+      <p class="subtitle">Welcome! Please choose one</p>
+    </header>
+    
+    <div class="buttons">
+      <a href="bags.html" class="btn" title="View our bags"><span>👜</span> Bags</a>
+      <a href="book.html" class="btn" title="View our books"><span>📖</span> Books</a>
+      <a href="pens.html" class="btn" title="View our pens"><span>✏️</span> Pens</a>
+      <a href="notebooks.html" class="btn" title="View our notebooks"><span>📓</span> Notebooks</a>
+      <a href="print.html" class="btn" title="Print services"><span>🖨️</span> Print</a>
+    </div>
+  </div>
+
+</body>

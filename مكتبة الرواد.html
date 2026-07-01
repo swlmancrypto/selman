@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مكتبة الرواد</title>
+  <style>
+    /* reset */
+    * {
+      margin: 0; padding: 0;
+      box-sizing: border-box;
+      font-family: "Tahoma", sans-serif;
+    }
+
+    body {
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(90deg, #1b1013, #0b171a);
+      color: #fff;
+      padding: 1rhem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffd60a;
+    }
+
+    .container {
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      padding: 1rem;
+      text-align: center;
+      background: #f1f1f1;
+    }
+
+    /* زر الفلترة */
+    .filter-buttons {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .filter-buttons button {
+      margin: 0.5rem;
+      padding: 0.6rem 1rem;
+      border: none;
+      border-radius: 10px;
+      background: #00b4d8;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .filter-buttons button:hover {
+      background: #0077b6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #0077b6;
+      color: #fff;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📚 مكتبة الرواد</h1>
+    <nav>
+      <ul>
+        <li><a href="#">الرئيسية</a></li>
+        <li><a href="#">الأقسام</a></li>
+        <li><a href="#">عنا</a></li>
+        <li><a href="#">تواصل معنا</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="filter-buttons">
+    <button onclick="filterItems('all')">الكل</button>
+    <button onclick="filterItems('حقائب')">حقائب</button>
+    <button onclick="filterItems('دفاتر')"  >دفاتر</button>
+    <button onclick="filterItems('أقلام')">أقلام</button>
+  </section>
+
+  <section class="container">
+    <div class="card" data-category="حقائب">
+      <img src="https://i.imgur.com/dR5QF8V.jpg" alt="حقيبة">
+     <button ondblclick=href ="bag.html"></button>
+      <h3>حقيبة مدرسية</h3>
+    </div>
+    <div class="card" data-category="دفاتر">
+      <img src="https://i.imgur.com/mEcDgpt.jpg" alt="دفتر">
+      <h3>دفاتر</h3>
+    </div>
+    <div class="card" data-category="أقلام">
+      <img src="https://i.imgur.com/f3M1Fck.jpg" alt="قلم">
+      <h3>قلم حبر</h3>
+    </div>
+    <div class="card" data-category="كتب">
+      ,<img src="" alt="كتاب">
+      <h3>كتب</h3></div>
+
+  </section>
+
+  <script>
+    function filterItems(category) {
+      let cards = document.querySelectorAll(".card");
+      cards.forEach(card => {
+        if (category === "all" || card.dataset.category === category) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    }
+  </script>
+</body>
+</html
